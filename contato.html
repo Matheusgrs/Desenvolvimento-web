@@ -1,79 +1,88 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <!-- Metadados do documento -->
-    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura a viewport para garantir que a página seja renderizada corretamente em dispositivos móveis -->
-    <title>Contato - Empresa XYZ</title> <!-- Define o título da página -->
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
     <style>
-        /* Estilos gerais do corpo */
         body {
-            font-family: Arial, sans-serif; /* Define a fonte padrão do corpo */
-            margin: 0; /* Remove a margem padrão */
-            padding: 0; /* Remove o padding padrão */
-            background-color: #f4f4f4; /* Define a cor de fundo do corpo */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
         }
-
-        /* Estilos do container principal */
         .container {
-            width: 80%; /* Define a largura do container como 80% da largura da página */
-            margin: auto; /* Centraliza o container horizontalmente */
-            overflow: hidden; /* Oculta o conteúdo que transborda */
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
         }
-
-        /* Estilos do cabeçalho */
         header {
-            background: #333; /* Define a cor de fundo do cabeçalho */
-            color: #fff; /* Define a cor do texto do cabeçalho */
-            padding-top: 30px; /* Adiciona padding no topo do cabeçalho */
-            min-height: 70px; /* Define a altura mínima do cabeçalho */
-            border-bottom: #77aaff 3px solid; /* Adiciona uma borda inferior ao cabeçalho */
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #77aaff 3px solid;
         }
-
         header a {
-            color: #fff; /* Define a cor dos links no cabeçalho */
-            text-decoration: none; /* Remove a sublinha dos links */
-            text-transform: uppercase; /* Transforma o texto dos links em maiúsculas */
-            font-size: 16px; /* Define o tamanho da fonte dos links */
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
         }
-
         header ul {
-            padding: 0; /* Remove o padding da lista */
-            list-style: none; /* Remove os marcadores da lista */
+            padding: 0;
+            list-style: none;
         }
-
         header li {
-            float: left; /* Faz com que os itens da lista flutuem à esquerda */
-            display: inline; /* Exibe os itens da lista em linha */
-            padding: 0 20px 0 20px; /* Adiciona padding aos itens da lista */
+            float: left;
+            display: inline;
+            padding: 0 20px 0 20px;
         }
-
         header #branding {
-            float: left; /* Faz com que o branding flutue à esquerda */
+            float: left;
         }
-
         header #branding h1 {
-            margin: 0; /* Remove a margem do título */
+            margin: 0;
         }
-
         header nav {
-            float: right; /* Faz com que a navegação flutue à direita */
-            margin-top: 10px; /* Adiciona margem superior à navegação */
+            float: right;
+            margin-top: 10px;
         }
-
-        .main-content {
-            padding: 20px; /* Adiciona padding ao conteúdo principal */
-            background: #fff; /* Define a cor de fundo do conteúdo principal */
-            margin-top: 20px; /* Adiciona margem superior ao conteúdo principal */
+        .content {
+            padding: 20px;
+            background: #fff;
+            margin-top: 20px;
         }
-
         footer {
-            background: #333; /* Define a cor de fundo do rodapé */
-            color: #fff; /* Define a cor do texto do rodapé */
-            text-align: center; /* Centraliza o texto no rodapé */
-            padding: 10px 0; /* Adiciona padding ao rodapé */
-            margin-top: 20px; /* Adiciona margem superior ao rodapé */
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        form label {
+            margin: 10px 0 5px;
+        }
+        form input, form textarea {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        form button {
+            padding: 10px;
+            background: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        form button:hover {
+            background: #555;
         }
     </style>
 </head>
@@ -81,34 +90,37 @@
     <header>
         <div class="container">
             <div id="branding">
-                <h1>Empresa XYZ</h1> <!-- Título da empresa no cabeçalho -->
+                <h1>Empresa XYZ</h1>
             </div>
             <nav>
                 <ul>
-                    <li><a href="index.html">Home</a></li> <!-- Link para a página inicial -->
-                    <li><a href="sobre.html">Sobre</a></li> <!-- Link para a página sobre -->
-                    <li><a href="contato.html">Contato</a></li> <!-- Link para a página de contato -->
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="contato.html">Contato</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-
-    <div class="container main-content">
-        <h2>Contato</h2> <!-- Título da seção de contato -->
-        <p>Entre em contato conosco através do formulário abaixo:</p> <!-- Texto introdutório para o formulário de contato -->
-        <form action="enviar_contato.php" method="post"> <!-- Formulário que envia dados para "enviar_contato.php" usando o método POST -->
-            <label for="nome">Nome:</label> <!-- Rótulo para o campo de nome -->
-            <input type="text" id="nome" name="nome" required><br><br> <!-- Campo de entrada para o nome, obrigatório -->
-            <label for="email">Email:</label> <!-- Rótulo para o campo de email -->
-            <input type="email" id="email" name="email" required><br><br> <!-- Campo de entrada para o email, obrigatório -->
-            <label for="mensagem">Mensagem:</label><br> <!-- Rótulo para o campo de mensagem -->
-            <textarea id="mensagem" name="mensagem" rows="10" cols="30" required></textarea><br><br> <!-- Área de texto para a mensagem, obrigatória -->
-            <input type="submit" value="Enviar"> <!-- Botão de envio do formulário -->
-        </form>
+    <div class="container">
+        <div class="content">
+            <h2>Contato</h2>
+            <p>Entre em contato conosco preenchendo o formulário abaixo:</p>
+            <form action="enviar_contato.php" method="post">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
     </div>
-
     <footer>
-        <p>Empresa XYZ &copy; 2025</p> <!-- Texto do rodapé com o nome da empresa e o ano -->
+        <p>Empresa XYZ &copy; 2025</p>
     </footer>
 </body>
 </html>
