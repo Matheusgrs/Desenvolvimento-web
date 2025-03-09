@@ -1,28 +1,57 @@
-<html lang="pt-BR"> <!-- Início do documento HTML com idioma definido como português do Brasil -->
+<!DOCTYPE html> <!-- Define o tipo de documento como HTML5 -->
+<html lang="pt-BR"> <!-- Define o idioma da página como português do Brasil -->
 <head>
-    <!-- Metadados e estilos da página -->
     <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura a viewport para responsividade -->
-    <title>Landing Page</title> <!-- Título da página -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Define a viewport para responsividade -->
+    <title>XYZ - Página Inicial</title> <!-- Define o título da página -->
     <style>
-        /* Estilos gerais para o corpo da página */
-        body {
-            font-family: Arial, sans-serif; /* Define a fonte padrão */
+        html, body {
+            height: 100%; /* Garante que o body ocupe toda a altura da tela */
             margin: 0; /* Remove a margem padrão */
             padding: 0; /* Remove o padding padrão */
             box-sizing: border-box; /* Define o box-sizing como border-box */
-            background-color: #808080; /* Define a cor de fundo como cinza */
-            color: #e0e0e0; /* Define a cor do texto */
+            background-color: #f0f0f0; /* Define a cor de fundo do body */
+            color: #333; /* Define a cor do texto */
+            font-family: Arial, sans-serif; /* Define a fonte do texto */
         }
-        /* Estilos para o cabeçalho */
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
         header {
-            background-color: #FFA500; /* Define a cor de fundo do cabeçalho como laranja */
-            color: white; /* Define a cor do texto do cabeçalho */
-            padding: 1rem; /* Define o padding do cabeçalho */
-            text-align: center; /* Centraliza o texto do cabeçalho */
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #77aaff 3px solid;
         }
-        /* Estilos para a seção hero */
-        .hero {       
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+        header li {
+            float: left;
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        header #branding {
+            float: left;
+        }
+        header #branding h1 {
+            margin: 0;
+        }
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+        .hero {
             background-image: url('hero-image.jpg'); /* Define a imagem de fundo da seção hero */
             background-size: cover; /* Define o tamanho da imagem de fundo como cover */
             background-position: center; /* Centraliza a imagem de fundo */
@@ -36,20 +65,42 @@
         .hero h1 {
             font-size: 3rem; /* Define o tamanho da fonte do título */
         }
-        /* Estilos para a seção de conteúdo */
         .content {
-            padding: 2rem; /* Define o padding da seção de conteúdo */
+            padding: 2rem; /* Define o padding da seção content */
             text-align: center; /* Centraliza o texto */
         }
         .content h2 {
-            margin-top: 0; /* Remove a margem superior do título */
-            margin-bottom: 2rem; /* Define a margem inferior do título */
+            margin-top: 0; /* Remove a margem superior */
+            margin-bottom: 2rem; /* Define a margem inferior */
         }
-        /* Estilos para a seção de chamada para ação */
+        .services {
+            background-color: #e0e0e0; /* Define a cor de fundo da seção services */
+            color: #333; /* Define a cor do texto */
+            padding: 2rem; /* Define o padding da seção services */
+            text-align: center; /* Centraliza o texto */
+        }
+        .services h2 {
+            margin-top: 0; /* Remove a margem superior */
+            margin-bottom: 2rem; /* Define a margem inferior */
+        }
+        .services .service {
+            margin-bottom: 1rem; /* Define a margem inferior dos serviços */
+        }
+        .team {
+            padding: 2rem; /* Define o padding da seção team */
+            text-align: center; /* Centraliza o texto */
+        }
+        .team h2 {
+            margin-top: 0; /* Remove a margem superior */
+            margin-bottom: 2rem; /* Define a margem inferior */
+        }
+        .team .member {
+            margin-bottom: 1rem; /* Define a margem inferior dos membros */
+        }
         .cta {
-            background-color: #FFA500; /* Define a cor de fundo da seção de chamada para ação como laranja */
+            background-color: #333; /* Define a cor de fundo da seção cta */
             color: white; /* Define a cor do texto */
-            padding: 1rem; /* Define o padding */
+            padding: 1rem; /* Define o padding da seção cta */
             text-align: center; /* Centraliza o texto */
             margin-top: 2rem; /* Define a margem superior */
         }
@@ -59,41 +110,101 @@
             font-weight: bold; /* Define o peso da fonte como bold */
         }
         .cta a:hover {
-            color: #333; /* Define a cor do link quando o mouse passar por cima */
+            color: #4e4e4e; /* Cor do link ao passar o mouse */
         }
-        
-        /* Estilos para o rodapé */
         footer {
             background-color: #333; /* Define a cor de fundo do rodapé */
             color: white; /* Define a cor do texto */
             text-align: center; /* Centraliza o texto */
-            padding: 1rem; /* Define o padding */
+            padding: 1rem; /* Define o padding do rodapé */
             position: relative; /* Define a posição como relativa */
             width: 100%; /* Define a largura como 100% */
+        }
+        .contact {
+            padding: 2rem; /* Define o padding da seção contact */
+            text-align: center; /* Centraliza o texto */
+            background-color: #f9f9f9; /* Define a cor de fundo da seção contact */
+        }
+        .contact h2 {
+            margin-top: 0; /* Remove a margem superior */
+            margin-bottom: 2rem; /* Define a margem inferior */
+        }
+        .contact p {
+            margin-bottom: 1rem; /* Define a margem inferior */
+        }
+        .contact button {
+            background-color: #333; /* Define a cor de fundo do botão */
+            color: white; /* Define a cor do texto do botão */
+            border: none; /* Remove a borda do botão */
+            padding: 1rem 2rem; /* Define o padding do botão */
+            cursor: pointer; /* Define o cursor como pointer */
+            font-size: 1rem; /* Define o tamanho da fonte do botão */
+        }
+        .contact button:hover {
+            background-color: #555; /* Define a cor de fundo do botão ao passar o mouse */
         }
     </style>
 </head>
 <body>
-    <!-- Cabeçalho da página -->
     <header>
-        <h1>Bem-vindo à Nossa Landing Page</h1> <!-- Título do cabeçalho -->
+        <div class="container">
+            <div id="branding">
+                <h1>Empresa XYZ</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <!-- Seção hero com imagem de fundo e slogan -->
     <section class="hero">
         <h1>Seu Slogan Aqui</h1> <!-- Título da seção hero -->
     </section>
-    <!-- Seção de conteúdo sobre a empresa ou produto -->
     <section class="content">
-        <h2>Sobre Nós</h2> <!-- Título da seção de conteúdo -->
-        <p>Adicione aqui uma breve descrição sobre sua empresa ou produto.</p> <!-- Parágrafo de descrição -->
+        <h2>Sobre Nós</h2> <!-- Título da seção content -->
+        <p>Adicione aqui uma breve descrição sobre a XYZ.</p> <!-- Parágrafo da seção content -->
     </section>
-    <!-- Seção de chamada para ação com link de contato -->
+    <section class="services">
+        <h2>Nossos Serviços</h2> <!-- Título da seção services -->
+        <div class="service">
+            <h3>Serviço 1</h3> <!-- Título do serviço 1 -->
+            <p>Descrição do serviço 1.</p> <!-- Descrição do serviço 1 -->
+        </div>
+        <div class="service">
+            <h3>Serviço 2</h3> <!-- Título do serviço 2 -->
+            <p>Descrição do serviço 2.</p> <!-- Descrição do serviço 2 -->
+        </div>
+        <div class="service">
+            <h3>Serviço 3</h3> <!-- Título do serviço 3 -->
+            <p>Descrição do serviço 3.</p> <!-- Descrição do serviço 3 -->
+        </div>
+    </section>
+    <section class="team">
+        <h2>Nosso Time</h2> <!-- Título da seção team -->
+        <div class="member">
+            <h3>Nome do Membro 1</h3> <!-- Nome do membro 1 -->
+            <p>Descrição do membro 1.</p> <!-- Descrição do membro 1 -->
+        </div>
+        <div class="member">
+            <h3>Nome do Membro 2</h3> <!-- Nome do membro 2 -->
+            <p>Descrição do membro 2.</p> <!-- Descrição do membro 2 -->
+        </div>
+        <div class="member">
+            <h3>Nome do Membro 3</h3> <!-- Nome do membro 3 -->
+            <p>Descrição do membro 3.</p> <!-- Descrição do membro 3 -->
+        </div>
+    </section>
     <section class="cta">
-        <p>Interessado? <a href="#">Entre em contato conosco!</a></p> <!-- Parágrafo com link de contato -->
-    </section>    
-    <!-- Rodapé da página -->
+        <p>Interessado? <a href="contato.html">Entre em contato conosco!</a></p> <!-- Texto e link da seção cta -->
+    </section>
     <footer>
-        <p>&copy; 2025 Sua Empresa. Todos os direitos reservados.</p> <!-- Texto do rodapé -->
+        <p>&copy; 2025 XYZ. Todos os direitos reservados.</p> <!-- Texto do rodapé -->
+    </footer>
+</body>
+</html>
     </footer>
 </body>
 </html>
