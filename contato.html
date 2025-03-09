@@ -1,129 +1,129 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato</title>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8, garantindo a correta exibição de caracteres especiais -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura a viewport para garantir que a página seja exibida corretamente em dispositivos móveis -->
+    <title>Contato</title> <!-- Define o título da página como "Contato", que será exibido na aba do navegador -->
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
+            font-family: Arial, sans-serif; /* Define a família de fontes para o texto do corpo */
+            margin: 0; /* Remove a margem padrão do corpo */
+            padding: 0; /* Remove o preenchimento padrão do corpo */
+            background-color: #f4f4f4; /* Define uma cor de fundo cinza claro para o corpo */
+            display: flex; /* Utiliza o layout flexbox para o corpo */
+            flex-direction: column; /* Organiza os itens flex (filhos) em uma coluna */
+            min-height: 100vh; /* Garante que o corpo ocupe pelo menos a altura total da janela de visualização */
         }
         .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
+            width: 80%; /* Define a largura do contêiner para ser 80% do elemento pai */
+            margin: auto; /* Centraliza o contêiner horizontalmente dentro do elemento pai */
+            overflow: hidden; /* Evita que o conteúdo do contêiner transborde */
         }
         header {
-            background: #333;
-            color: #fff;
-            padding-top: 30px;
-            min-height: 70px;
-            border-bottom: #77aaff 3px solid;
+            background: #333; /* Define uma cor de fundo escura para o cabeçalho */
+            color: #fff; /* Define a cor do texto como branco */
+            padding-top: 30px; /* Adiciona preenchimento ao topo do cabeçalho */
+            min-height: 70px; /* Garante que o cabeçalho tenha uma altura mínima de 70px */
+            border-bottom: #77aaff 3px solid; /* Adiciona uma borda sólida na parte inferior do cabeçalho com uma cor e espessura específicas */
         }
         header a {
-            color: #fff;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 16px;
+            color: #fff; /* Define a cor do texto dos links como branco */
+            text-decoration: none; /* Remove o sublinhado dos links */
+            text-transform: uppercase; /* Transforma o texto dos links para letras maiúsculas */
+            font-size: 16px; /* Define o tamanho da fonte dos links como 16 pixels */
         }
         header ul {
-            padding: 0;
-            list-style: none;
+            padding: 0; /* Remove o preenchimento padrão da lista não ordenada */
+            list-style: none; /* Remove os marcadores padrão da lista não ordenada */
         }
         header li {
-            float: left;
-            display: inline;
-            padding: 0 20px 0 20px;
+            float: left; /* Faz o item flutuar à esquerda, permitindo que outros elementos flutuem ao lado dele */
+            display: inline; /* Define o item como inline, fazendo com que ele ocupe apenas o espaço necessário */
+            padding: 0 20px 0 20px; /* Adiciona preenchimento de 20px à esquerda e à direita do item, mantendo o topo e o fundo sem preenchimento */
         }
         header #branding {
-            float: left;
+            float: left; /* Faz o elemento flutuar à esquerda, permitindo que outros elementos flutuem ao lado dele */
         }
         header #branding h1 {
-            margin: 0;
+            margin: 0; /* Define a margem do elemento como 0, removendo qualquer espaço ao redor do elemento */
         }
         header nav {
-            float: right;
-            margin-top: 10px;
+            float: right; /* Faz o elemento de navegação flutuar à direita, permitindo que outros elementos flutuem ao lado dele */
+            margin-top: 10px; /* Adiciona uma margem superior de 10 pixels ao elemento de navegação */
         }
         .content {
-            padding: 20px;
-            background: #fff;
-            margin-top: 20px;
+            padding: 20px; /* Adiciona um preenchimento de 20 pixels ao redor do conteúdo */
+            background: #fff; /* Define a cor de fundo do conteúdo como branco */
+            margin-top: 20px; /* Adiciona uma margem superior de 20 pixels ao conteúdo */
         }
         footer {
-            background: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-            margin-top: 20px;
+            background: #333; /* Define a cor de fundo do rodapé como cinza escuro */
+            color: #fff; /* Define a cor do texto do rodapé como branco */
+            text-align: center; /* Centraliza o texto dentro do rodapé */
+            padding: 10px; /* Adiciona um preenchimento de 10 pixels ao redor do rodapé */
+            margin-top: 20px; /* Adiciona uma margem superior de 20 pixels ao rodapé */
         }
         form {
-            display: flex;
-            flex-direction: column;
+            display: flex; /* Utiliza o layout flexbox para o formulário */
+            flex-direction: column; /* Organiza os itens do formulário em uma coluna */
         }
         form label {
-            margin: 10px 0 5px;
+            margin: 10px 0 5px; /* Adiciona uma margem ao redor dos rótulos do formulário */
         }
         form input, form textarea {
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+            padding: 10px; /* Adiciona um preenchimento de 10 pixels ao redor dos campos de entrada e área de texto */
+            margin-bottom: 10px; /* Adiciona uma margem inferior de 10 pixels aos campos de entrada e área de texto */
+            border: 1px solid #ccc; /* Define uma borda de 1 pixel sólida e cinza claro ao redor dos campos de entrada e área de texto */
+            border-radius: 5px; /* Adiciona bordas arredondadas de 5 pixels aos campos de entrada e área de texto */
         }
         form button {
-            padding: 10px;
-            background: #333;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
+            padding: 10px; /* Adiciona um preenchimento de 10 pixels ao redor do botão */
+            background: #333; /* Define a cor de fundo do botão como cinza escuro */
+            color: #fff; /* Define a cor do texto do botão como branco */
+            border: none; /* Remove qualquer borda do botão */
+            border-radius: 5px; /* Adiciona bordas arredondadas de 5 pixels ao botão */
+            cursor: pointer; /* Altera o cursor para um ponteiro ao passar o mouse sobre o botão */
         }
         form button:hover {
-            background: #555;
+            background: #555; /* Altera a cor de fundo do botão para um cinza mais claro ao passar o mouse sobre ele */
         }
     </style>
 </head>
-<body>
-    <header>
-        <div class="container">
-            <div id="branding">
-                <h1>Empresa XYZ</h1>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="sobre.html">Sobre</a></li>
-                    <li><a href="contato.html">Contato</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <div class="container">
-        <div class="content">
-            <h2>Contato</h2>
-            <p>Entre em contato conosco preenchendo o formulário abaixo:</p>
-            <form action="enviar_contato.php" method="post">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required>
+<body> <!-- Início do corpo do documento -->
+    <header> <!-- Início do cabeçalho -->
+        <div class="container"> <!-- Contêiner para centralizar o conteúdo do cabeçalho -->
+            <div id="branding"> <!-- Seção de branding -->
+                <h1>Empresa XYZ</h1> <!-- Título da empresa -->
+            </div> <!-- Fim da seção de branding -->
+            <nav> <!-- Início da navegação -->
+                <ul> <!-- Lista não ordenada para os links de navegação -->
+                    <li><a href="index.html">Início</a></li> <!-- Link para a página inicial -->
+                    <li><a href="sobre.html">Sobre</a></li> <!-- Link para a página sobre -->
+                    <li><a href="contato.html">Contato</a></li> <!-- Link para a página de contato -->
+                </ul> <!-- Fim da lista não ordenada -->
+            </nav> <!-- Fim da navegação -->
+        </div> <!-- Fim do contêiner do cabeçalho -->
+    </header> <!-- Fim do cabeçalho -->
+    <div class="container"> <!-- Contêiner para centralizar o conteúdo principal -->
+        <div class="content"> <!-- Seção de conteúdo principal -->
+            <h2>Contato</h2> <!-- Título da seção de contato -->
+            <p>Entre em contato conosco preenchendo o formulário abaixo:</p> <!-- Parágrafo de instrução -->
+            <form action="enviar_contato.php" method="post"> <!-- Início do formulário com método POST -->
+                <label for="nome">Nome:</label> <!-- Rótulo para o campo de nome -->
+                <input type="text" id="nome" name="nome" required> <!-- Campo de entrada para o nome, obrigatório -->
                 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <label for="email">Email:</label> <!-- Rótulo para o campo de email -->
+                <input type="email" id="email" name="email" required> <!-- Campo de entrada para o email, obrigatório -->
                 
-                <label for="mensagem">Mensagem:</label>
-                <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                <label for="mensagem">Mensagem:</label> <!-- Rótulo para a área de texto da mensagem -->
+                <textarea id="mensagem" name="mensagem" rows="5" required></textarea> <!-- Área de texto para a mensagem, obrigatória -->
                 
-                <button type="submit">Enviar</button>
-            </form>
-        </div>
-    </div>
-    <footer>
-        <p>Empresa XYZ &copy; 2025</p>
-    </footer>
-</body>
+                <button type="submit">Enviar</button> <!-- Botão para enviar o formulário -->
+            </form> <!-- Fim do formulário -->
+        </div> <!-- Fim da seção de conteúdo principal -->
+    </div> <!-- Fim do contêiner do conteúdo principal -->
+    <footer> <!-- Início do rodapé -->
+        <p>Empresa XYZ &copy; 2025</p> <!-- Texto do rodapé com o nome da empresa e ano -->
+    </footer> <!-- Fim do rodapé -->
+</body> <!-- Fim do corpo do documento -->
 </html>

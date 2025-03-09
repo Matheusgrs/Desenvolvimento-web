@@ -1,96 +1,96 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre</title>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8, garantindo suporte a caracteres especiais -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura a viewport para garantir que a página seja exibida corretamente em dispositivos móveis -->
+    <title>Sobre</title> <!-- Define o título da página como "Sobre" -->
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
+            font-family: Arial, sans-serif; /* Define a fonte padrão para o corpo do documento */
+            margin: 0; /* Remove a margem padrão do corpo */
+            padding: 0; /* Remove o preenchimento padrão do corpo */
+            background-color: #f4f4f4; /* Define a cor de fundo do corpo */
+            display: flex; /* Define o layout do corpo como flexbox */
+            flex-direction: column; /* Organiza os elementos filhos em uma coluna */
+            min-height: 100vh; /* Define a altura mínima do corpo como 100% da altura da viewport */
         }
         .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-            flex: 1;
+            width: 80%; /* Define a largura do container como 80% do elemento pai */
+            margin: auto; /* Centraliza o container horizontalmente */
+            overflow: hidden; /* Oculta o conteúdo que transborda do container */
+            flex: 1; /* Permite que o container cresça para preencher o espaço disponível */
         }
         header {
-            background: #333;
-            color: #fff;
-            padding-top: 30px;
-            min-height: 70px;
-            border-bottom: #77aaff 3px solid;
+            background: #333; /* Define a cor de fundo do cabeçalho como cinza escuro */
+            color: #fff; /* Define a cor do texto do cabeçalho como branco */
+            padding-top: 30px; /* Adiciona um preenchimento superior de 30px no cabeçalho */
+            min-height: 70px; /* Define a altura mínima do cabeçalho como 70px */
+            border-bottom: #77aaff 3px solid; /* Adiciona uma borda inferior azul clara de 3px no cabeçalho */
         }
         header a {
-            color: #fff;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 16px;
+            color: #fff; /* Define a cor do texto dos links no cabeçalho como branco */
+            text-decoration: none; /* Remove a decoração de texto (sublinhado) dos links */
+            text-transform: uppercase; /* Transforma o texto dos links em letras maiúsculas */
+            font-size: 16px; /* Define o tamanho da fonte dos links como 16px */
         }
         header ul {
-            padding: 0;
-            list-style: none;
+            padding: 0; /* Remove o preenchimento padrão da lista não ordenada */
+            list-style: none; /* Remove os marcadores da lista */
         }
         header li {
-            float: left;
-            display: inline;
-            padding: 0 20px 0 20px;
+            float: left; /* Faz com que os itens da lista flutuem à esquerda */
+            display: inline; /* Exibe os itens da lista em linha */
+            padding: 0 20px 0 20px; /* Adiciona um preenchimento horizontal de 20px nos itens da lista */
         }
         header #branding {
-            float: left;
+            float: left; /* Faz com que o elemento de branding flutue à esquerda */
         }
         header #branding h1 {
-            margin: 0;
+            margin: 0; /* Remove a margem padrão do título h1 */
         }
         header nav {
-            float: right;
-            margin-top: 10px;
+            float: right; /* Faz com que o elemento de navegação flutue à direita */
+            margin-top: 10px; /* Adiciona uma margem superior de 10px no elemento de navegação */
         }
         .content {
-            padding: 20px;
-            background: #fff;
-            margin-top: 20px;
+            padding: 20px; /* Adiciona um preenchimento de 20px ao conteúdo */
+            background: #fff; /* Define a cor de fundo do conteúdo como branco */
+            margin-top: 20px; /* Adiciona uma margem superior de 20px ao conteúdo */
         }
         footer {
-            background: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-            margin-top: auto;
+            background: #333; /* Define a cor de fundo do rodapé como cinza escuro */
+            color: #fff; /* Define a cor do texto do rodapé como branco */
+            text-align: center; /* Centraliza o texto no rodapé */
+            padding: 10px; /* Adiciona um preenchimento de 10px ao rodapé */
+            margin-top: auto; /* Adiciona uma margem superior automática para empurrar o rodapé para o fim da página */
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div id="branding">
-                <h1>Empresa XYZ</h1>
+    <header> <!-- Início do cabeçalho da página -->
+        <div class="container"> <!-- Container para centralizar e limitar a largura do conteúdo do cabeçalho -->
+            <div id="branding"> <!-- Div para o branding da empresa -->
+                <h1>Empresa XYZ</h1> <!-- Título principal com o nome da empresa -->
             </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="sobre.html">Sobre</a></li>
-                    <li><a href="contato.html">Contato</a></li>
+            <nav> <!-- Início da navegação -->
+                <ul> <!-- Lista não ordenada para os itens de navegação -->
+                    <li><a href="index.html">Início</a></li> <!-- Link para a página inicial -->
+                    <li><a href="sobre.html">Sobre</a></li> <!-- Link para a página sobre -->
+                    <li><a href="contato.html">Contato</a></li> <!-- Link para a página de contato -->
                 </ul>
             </nav>
         </div>
     </header>
-    <div class="container">
-        <div class="content">
-            <h2>Sobre</h2>
-            <p>A XYZ Engenharia foi fundada em 2002 por três engenheiros visionários: Ana, Bruno e Carlos. Desde o início, a missão da empresa foi combinar inovação tecnológica com sustentabilidade. Inicialmente, a XYZ focou em projetos residenciais, ganhando destaque por suas soluções de construção eco-friendly e uso de materiais reciclados. À medida que a empresa crescia, também ampliou sua atuação para projetos comerciais, sempre priorizando práticas sustentáveis e eficientes.</p>
-            <p>Com o passar dos anos, a XYZ se tornou referência no mercado, conquistando importantes prêmios de engenharia e sustentabilidade. Um dos marcos na história da empresa foi a construção da Torre Verde, um edifício de escritórios totalmente autossuficiente em energia, utilizando painéis solares e sistemas de captação de água da chuva. Este projeto não apenas elevou o prestígio da XYZ, mas também inspirou outras empresas a adotarem práticas mais ecológicas em suas construções.</p>
-            <p>Hoje, a XYZ Engenharia é líder no mercado de engenharia sustentável, com presença em diversos estados do Brasil e até no exterior. Seus projetos são sinônimos de inovação, qualidade e respeito ao meio ambiente. Além disso, a empresa investe constantemente em pesquisas e desenvolvimento para continuar oferecendo soluções que beneficiem tanto seus clientes quanto o planeta. A visão da XYZ é clara: construir um futuro onde a engenharia e a sustentabilidade caminhem lado a lado.</p>
+    <div class="container"> <!-- Container para centralizar e limitar a largura do conteúdo principal -->
+        <div class="content"> <!-- Div para o conteúdo principal da página -->
+            <h2>Sobre</h2> <!-- Título da seção sobre -->
+            <p>A XYZ Engenharia foi fundada em 2002 por três engenheiros visionários: Ana, Bruno e Carlos. Desde o início, a missão da empresa foi combinar inovação tecnológica com sustentabilidade. Inicialmente, a XYZ focou em projetos residenciais, ganhando destaque por suas soluções de construção eco-friendly e uso de materiais reciclados. À medida que a empresa crescia, também ampliou sua atuação para projetos comerciais, sempre priorizando práticas sustentáveis e eficientes.</p> <!-- Parágrafo descrevendo a fundação e missão da empresa -->
+            <p>Com o passar dos anos, a XYZ se tornou referência no mercado, conquistando importantes prêmios de engenharia e sustentabilidade. Um dos marcos na história da empresa foi a construção da Torre Verde, um edifício de escritórios totalmente autossuficiente em energia, utilizando painéis solares e sistemas de captação de água da chuva. Este projeto não apenas elevou o prestígio da XYZ, mas também inspirou outras empresas a adotarem práticas mais ecológicas em suas construções.</p> <!-- Parágrafo descrevendo o crescimento e conquistas da empresa -->
+            <p>Hoje, a XYZ Engenharia é líder no mercado de engenharia sustentável, com presença em diversos estados do Brasil e até no exterior. Seus projetos são sinônimos de inovação, qualidade e respeito ao meio ambiente. Além disso, a empresa investe constantemente em pesquisas e desenvolvimento para continuar oferecendo soluções que beneficiem tanto seus clientes quanto o planeta. A visão da XYZ é clara: construir um futuro onde a engenharia e a sustentabilidade caminhem lado a lado.</p> <!-- Parágrafo descrevendo a posição atual da empresa e sua visão para o futuro -->
         </div>
     </div>
-    <footer>
-        <p>Empresa XYZ &copy; 2025</p>
+    <footer> <!-- Início do rodapé da página -->
+        <p>Empresa XYZ &copy; 2025</p> <!-- Texto do rodapé com o nome da empresa e o ano -->
     </footer>
 </body>
 </html>
